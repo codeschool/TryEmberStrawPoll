@@ -1,0 +1,19 @@
+<div class="container results">
+  <section>
+    <div class="pollHeader">
+      <span>{{input value=model.stem}}</span>
+    </div>
+    <div class="pollBody">
+      <ol>
+        {{#each model.options as |option|}}
+          <li>
+            {{input value=option.text}}
+          </li>
+        {{/each}}
+      </ol>
+    </div>
+    <div class="pollFooter">
+      {{#link-to 'polls.poll'}}back{{/link-to}}
+    </div>
+  </section>
+</div>

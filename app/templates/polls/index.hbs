@@ -1,0 +1,4 @@
+<p>Here is a list of polls!</p>
+{{#each model as |poll|}}
+<p>View {{#link-to 'polls.poll' poll}}{{poll.stem}}{{/link-to}}</p>
+{{/each}}

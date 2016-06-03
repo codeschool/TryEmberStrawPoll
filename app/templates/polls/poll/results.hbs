@@ -1,0 +1,20 @@
+<div class="container results">
+  <section>
+    <div class="pollHeader">
+      <span>{{model.stem}}</span>
+    </div>
+    <div class="pollBody">
+      <ol>
+        {{#each model.options as |option|}}
+          <li>
+            {{option.text}}
+            {{option-tally votes=option.votes totalVotes=model.votes}}
+          </li>
+        {{/each}}
+      </ol>
+    </div>
+    <div class="pollFooter">
+      {{model.votes}} total votes cast
+    </div>
+  </section>
+</div>
